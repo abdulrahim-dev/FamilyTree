@@ -198,6 +198,28 @@
     <Folder Include="Models\" />
     <Folder Include="Steps\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FamilyTree.Core\FamilyTree.Core.csproj">
+      <Project>{250f1328-f1eb-463c-b570-98318d9debb1}</Project>
+      <Name>FamilyTree.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FamilyTree.Data\FamilyTree.Data.csproj">
+      <Project>{3012acf6-b417-4e82-ab3a-656e43408640}</Project>
+      <Name>FamilyTree.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FamilyTree.Dto\FamilyTree.Dto.csproj">
+      <Project>{264bbfbc-8319-45f1-9b05-81ef26b0884d}</Project>
+      <Name>FamilyTree.Dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FamilyTree.Logging\FamilyTree.Logging.csproj">
+      <Project>{f471bea6-8fdb-478b-a3e7-294e48c44d02}</Project>
+      <Name>FamilyTree.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FamilyTree.Services\FamilyTree.Services.csproj">
+      <Project>{51ab5046-d786-4668-9fac-d913d2660d57}</Project>
+      <Name>FamilyTree.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
