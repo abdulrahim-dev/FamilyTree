@@ -1,4 +1,5 @@
-﻿using FamilyTree.Core.Entities.Foundation;
+﻿using FamilyTree.Core.Data.Repositories;
+using FamilyTree.Core.Entities.Foundation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
