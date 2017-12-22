@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace FamilyTree.Web
 {
@@ -9,7 +10,11 @@ namespace FamilyTree.Web
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
+            // Enable CORS is in WebAPI    new EnableCorsAttribute("http://www.{domain}.com", "*", "*"); 
+            // Added Abdul
+            // We have added enable cors for /token or login method in IdentityConfig.cs for other requests
+            var corsAttr = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(corsAttr);
 
             // Web API routes
             config.MapHttpAttributeRoutes();

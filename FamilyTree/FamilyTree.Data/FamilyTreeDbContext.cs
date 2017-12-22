@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace FamilyTree.Data
 {
-    class FamilyTreeDbContext : IdentityDbContext<ApplicationUser>, IDbContext
+    public class FamilyTreeDbContext : IdentityDbContext<ApplicationUser>, IDbContext
     {
         private ObjectContext _objectContext;
         private DbTransaction _transaction;
