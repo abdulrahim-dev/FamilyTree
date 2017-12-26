@@ -16,7 +16,7 @@ namespace FamilyTree.Web
             routes.MapRoute(
                 name: "Login",
                 url: "login",
-                defaults: new { controller = "Login", action = "Index", id = UrlParameter.Optional },
+                defaults: new { controller = "Login", action = "Login", id = UrlParameter.Optional },
                 namespaces: new[] { "FamilyTree.Web.Controllers" }
             );
 
