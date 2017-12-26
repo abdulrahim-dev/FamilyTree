@@ -22,8 +22,13 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Admin", "Index", "Home", new { area = "Admin" }, null)</li>
-                    <li>@Html.ActionLink("Category", "Index", "Category", new { area = "Admin" }, null)</li>
+                    
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Admin", "Index", "Home", new { area = "Admin" }, null)</li>
+                        <li>@Html.ActionLink("Category", "Index", "Category", new { area = "Admin" }, null)</li>
+                        <li><a href="/logout">Log off</a></li>
+                    }
                 </ul>
             </div>
         </div>

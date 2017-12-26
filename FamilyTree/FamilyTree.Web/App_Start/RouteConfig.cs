@@ -19,6 +19,12 @@ namespace FamilyTree.Web
                 defaults: new { controller = "Login", action = "Login", id = UrlParameter.Optional },
                 namespaces: new[] { "FamilyTree.Web.Controllers" }
             );
+            routes.MapRoute(
+                name: "Logout",
+                url: "logout",
+                defaults: new { controller = "Login", action = "LogOff", id = UrlParameter.Optional },
+                namespaces: new[] { "FamilyTree.Web.Controllers" }
+            );
 
             routes.MapRoute(
                 name: "Default",

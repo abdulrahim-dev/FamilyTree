@@ -85,6 +85,16 @@ namespace FamilyTree.Web.Controllers
             }
         }
 
+        //
+        // POST: /Account/LogOff
+        
+        
+        public ActionResult LogOff()
+        {
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            return RedirectToAction("Login", "Login");
+        }
+
         #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
