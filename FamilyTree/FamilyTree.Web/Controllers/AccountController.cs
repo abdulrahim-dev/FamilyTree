@@ -1,5 +1,5 @@
 ﻿using FamilyTree.Core.Entities;
-using FamilyTree.Web.App_Start;
+using FamilyTree.Web;
 using FamilyTree.Web.Models;
 using FamilyTree.Web.Providers;
 using Microsoft.AspNet.Identity;

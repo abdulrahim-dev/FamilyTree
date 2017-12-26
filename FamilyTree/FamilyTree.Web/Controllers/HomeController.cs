@@ -7,6 +7,7 @@ using FamilyTree.Data;
 
 namespace FamilyTree.Web.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         // GET: Home

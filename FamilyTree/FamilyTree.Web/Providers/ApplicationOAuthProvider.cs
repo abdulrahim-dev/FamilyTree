@@ -1,4 +1,4 @@
-﻿using FamilyTree.Web.App_Start;
+﻿using FamilyTree.Web;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security.OAuth;
 using System;

@@ -10,7 +10,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
 
-namespace FamilyTree.Web.App_Start
+namespace FamilyTree.Web
 {
     public partial class Startup
     {
