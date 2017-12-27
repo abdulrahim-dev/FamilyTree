@@ -25,7 +25,10 @@
 
                     @if (Request.IsAuthenticated)
                     {
-                        <li>@Html.ActionLink("Admin", "Index", "Home", new { area = "Admin" }, null)</li>
+                        if (User.IsInRole("Admin"))
+                        {
+                            <li>@Html.ActionLink("Admin", "Index", "Home", new { area = "Admin" }, null)</li>
+                        }
                         <li><a href="/Login/LogOff">Log off</a></li>
                     }
 
