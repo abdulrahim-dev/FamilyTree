@@ -27,6 +27,13 @@ namespace FamilyTree.Web
             );
 
             routes.MapRoute(
+                name: "Register",
+                url: "register",
+                defaults: new { controller = "Login", action = "Register", id = UrlParameter.Optional },
+                namespaces: new[] { "FamilyTree.Web.Controllers" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
