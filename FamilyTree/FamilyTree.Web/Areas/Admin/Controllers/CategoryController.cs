@@ -1,19 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Threading.Tasks;
 using System.Web.Mvc;
+using FamilyTree.Core.Services;
 using FamilyTree.Web.Attributes;
 
 namespace FamilyTree.Web.Areas.Admin.Controllers
 {
     [AdminAuthorize]
+
     public class CategoryController : Controller
     {
-        // GET: Admin/Category
-        public ActionResult Index()
+        private readonly ICategoryService _contactService;
+
+        public CategoryController(ICategoryService contactService)
         {
-            return View();
+            _contactService = contactService;
+        }
+
+
+
+        // GET: Admin/Category
+        public async Task<ActionResult> Index()
+        {
+            var categoryList = await _contactService.GetAllAsync();
+            return View(categoryList);
         }
     }
 }

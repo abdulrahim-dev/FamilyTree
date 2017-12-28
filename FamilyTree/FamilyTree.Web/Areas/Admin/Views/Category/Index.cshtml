@@ -1,4 +1,4 @@
-﻿
+﻿@model List<FamilyTree.Core.Entities.Category>
 @{
     ViewBag.Title = "Index";
 }
@@ -25,6 +25,20 @@
 <!-- END: Subheader -->
 
 <div class="m-content">
+
+    <table class="table">
+        <tr>
+            <th>Name</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+            </tr>
+        }
+    </table>
 
 </div>
 
