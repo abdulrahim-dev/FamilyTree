@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BaseService.cs" />
+    <Compile Include="Services\CategoryService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FamilyTree.Core\FamilyTree.Core.csproj">
