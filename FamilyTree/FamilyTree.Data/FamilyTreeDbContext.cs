@@ -9,6 +9,7 @@ using System.Data.Entity;
 using System.Data.Entity.Core.Objects;
 using System.Data.Entity.Infrastructure;
 using System.Threading.Tasks;
+using FamilyTree.Data.Configurations;
 
 namespace FamilyTree.Data
 {
@@ -50,7 +51,7 @@ namespace FamilyTree.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            //modelBuilder.Configurations.Add(new DentistProfileConfiguration());
+            modelBuilder.Configurations.Add(new CategoryConfiguration());
         }
 
         public static FamilyTreeDbContext Create()
