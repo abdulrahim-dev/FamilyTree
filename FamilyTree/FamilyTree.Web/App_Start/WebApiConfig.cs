@@ -16,8 +16,8 @@ namespace FamilyTree.Web
             var corsAttr = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(corsAttr);
 
-            // Web API routes
-            config.MapHttpAttributeRoutes();
+            //// Web API routes
+            config.EnsureInitialized();
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
